@@ -43,3 +43,5 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 
 model.fit(X_train, Y_train, batch_size=batch_size, nb_epoch=num_epochs, verbose=1, validation_split=0.1)
 model.evaluate(X_test, Y_test, verbose=1)
+
+print("Точность работы загруженной сети на тестовых данных: %.2f%%" % (scores[1]*100))
